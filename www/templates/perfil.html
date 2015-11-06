@@ -1,0 +1,33 @@
+<ion-view view-title="Mis datos" hide-back-button="true">
+<ion-content>
+<div class="card">
+    <div class="item item-text-wrap">
+        <h1 class="text-center">Mis datos</h1>
+        <p>Al ingresar sus datos podremos gestionar mejor sus solicitudes!</p>
+    </div>
+</div>
+<div class="card">
+    <div class="item item-text-wrap">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Nombre</span>
+                <input type="text" placeholder="Agregue primer nombre" ng-model="model.perfil.nombre">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Apellido</span>
+                <input type="text" placeholder="Agregue apellido paterno" ng-model="model.perfil.apellido">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Correo electrónico</span>
+                <input type="email" placeholder="nombre@correo.com" ng-model="model.perfil.correo">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Teléfono</span>
+                <input type="phone" placeholder="71418842" ng-model="model.perfil.telefono">
+            </label>
+            <a class="button button-full button-balanced" ng-click="editar()">Confirmar datos</a>
+        </div>
+    </div>
+</div>
+</ion-content>
+</ion-view>

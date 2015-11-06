@@ -1,0 +1,34 @@
+<ion-view view-title="Hacer un pedido" hide-back-button="true">
+
+<ion-content>
+<div class="card">
+    <div class="item item-text-wrap">
+        <h1 class="text-center">Confirmar</h1>
+    </div>
+</div>
+<div class="card">
+    <div class="item item-text-wrap">
+        <div class="list">
+            <div class="item item-icon-right" href="#">
+                {{model.detalle_pedido.litros.label}}
+                <i class="icon ion-checkmark-circled balanced"></i>
+            </div>
+            <div class="item item-icon-right" href="#">
+                {{model.detalle_pedido.cantidad.label}}
+                <i class="icon ion-checkmark-circled balanced"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="item item-text-wrap">
+        <button class="button button-full button-positive" ng-click="confirmar()">
+        Confirmar 
+        </button>
+    </div>
+</div>
+</ion-content>
+<ion-footer-bar class="bar-stable">
+<a class="button button-small icon-left ion-close-round pull-left" href="#/app/pedido">Cancelar</a>
+</ion-footer-bar>
+</ion-view>

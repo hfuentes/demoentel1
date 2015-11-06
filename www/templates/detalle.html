@@ -1,0 +1,33 @@
+<ion-view view-title="Hacer un pedido" hide-back-button="true">
+<ion-content>
+<div class="card">
+    <div class="item item-text-wrap">
+        <h1 class="text-center">Detalle</h1>
+    </div>
+</div>
+<div class="card">
+    <div class="item item-text-wrap">
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Litros
+                </div>
+                <select ng-model="model.litros" ng-options="item.label for item in model.litrosList track by item.value">
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Cantidad
+                </div>
+                <select ng-model="model.cantidad" ng-options="item.label for item in model.cantidadList track by item.value">
+                </select>
+            </label>
+        </div>
+    </div>
+</div>
+</ion-content>
+<ion-footer-bar class="bar-stable">
+<a class="button button-small icon-left ion-close-round pull-left" href="#/app/pedido">Cancelar</a>
+<a class="button button-large icon-right ion-chevron-right button-balanced" ng-click="siguiente()">Siguiente&nbsp;</a>
+</ion-footer-bar>
+</ion-view>
