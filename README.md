@@ -1,5 +1,5 @@
 # demoentel1
 app demo basica entel
 
-# observaciones
+# Observaciones
 App hecha en IONIC
