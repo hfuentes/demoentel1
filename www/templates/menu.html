@@ -3,7 +3,6 @@
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
       </ion-nav-back-button>
-
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -11,37 +10,32 @@
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
-
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Bienvenido!</h1>
+      <h1 class="title">Menú</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close href="#/app/pedido" class="item item-icon-right">
-          Pedido
-          <i class="icon ion-compose positive"></i>
+        <ion-item menu-close href="#/app/incio" class="item item-icon-right">
+          Inicio
+          <i class="icon ion-home light"></i>
+        </ion-item>
+        <ion-item menu-close href="#/app/detalle" class="item item-icon-right">
+          Pedido de cilindro
+          <i class="icon ion-compose light"></i>
         </ion-item>
         <ion-item menu-close href="#/app/llamame" class="item item-icon-right">
           Llámame
-          <i class="icon ion-ios-telephone positive"></i>
+          <i class="icon ion-ios-telephone light"></i>
+        </ion-item>
+        <ion-item menu-close href="#/app/mapa" class="item item-icon-right">
+          Sucursales
+          <i class="icon ion-map light"></i>
         </ion-item>
         <ion-item menu-close href="#/app/perfil" class="item item-icon-right">
           Mis datos
-          <i class="icon ion-person positive"></i>
+          <i class="icon ion-person light"></i>
         </ion-item>
-        <!--<ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
-        </ion-item>-->
       </ion-list>
     </ion-content>
   </ion-side-menu>

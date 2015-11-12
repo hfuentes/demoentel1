@@ -1,33 +1,38 @@
 <ion-view view-title="Hacer un pedido" hide-back-button="true">
-<ion-content>
-<div class="card">
-    <div class="item item-text-wrap">
-        <h1 class="text-center">Detalle</h1>
-    </div>
-</div>
-<div class="card">
-    <div class="item item-text-wrap">
-        <div class="list">
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Litros
+    <ion-content>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <br>
+                <div class="text-center" style="padding-right: 20px;"><img src="img/logo-abastible.png"></div>
+                <br>
+                <hr>
+                <h2 class="text-center"><strong>Detalle de tu pedido:</strong></h2>
+                <br>
+                <h2>Selecciona el tipo de cilindro según sus kilos y la cantidad que deseas pedir:</h2>
+                <br>
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Cilindro
+                        </div>
+                        <select ng-model="model.litros" ng-options="item.label for item in model.litrosList track by item.value">
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Cantidad
+                        </div>
+                        <select ng-model="model.cantidad" ng-options="item.label for item in model.cantidadList track by item.value">
+                        </select>
+                    </label>
                 </div>
-                <select ng-model="model.litros" ng-options="item.label for item in model.litrosList track by item.value">
-                </select>
-            </label>
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Cantidad
-                </div>
-                <select ng-model="model.cantidad" ng-options="item.label for item in model.cantidadList track by item.value">
-                </select>
-            </label>
+                <br>
+                <h2>Has click en siguiente para continuar!</h2>
+            </div>
         </div>
-    </div>
-</div>
-</ion-content>
-<ion-footer-bar class="bar-stable">
-<a class="button button-small icon-left ion-close-round pull-left" href="#/app/pedido">Cancelar</a>
-<a class="button button-large icon-right ion-chevron-right button-balanced" ng-click="siguiente()">Siguiente&nbsp;</a>
-</ion-footer-bar>
+    </ion-content>
+    <ion-footer-bar class="bar-stable">
+        <a class="button button-small icon-left ion-home pull-left" href="#/app/inicio">Inicio</a>
+        <a class="button button-large icon-right ion-chevron-right button-balanced" ng-click="siguiente()">Siguiente&nbsp;</a>
+    </ion-footer-bar>
 </ion-view>

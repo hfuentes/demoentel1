@@ -1,34 +1,39 @@
 <ion-view view-title="Hacer un pedido" hide-back-button="true">
-
-<ion-content>
-<div class="card">
-    <div class="item item-text-wrap">
-        <h1 class="text-center">Confirmar</h1>
-    </div>
-</div>
-<div class="card">
-    <div class="item item-text-wrap">
-        <div class="list">
-            <div class="item item-icon-right" href="#">
-                {{model.detalle_pedido.litros.label}}
-                <i class="icon ion-checkmark-circled balanced"></i>
-            </div>
-            <div class="item item-icon-right" href="#">
-                {{model.detalle_pedido.cantidad.label}}
-                <i class="icon ion-checkmark-circled balanced"></i>
+    <ion-content>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <br>
+                <div class="text-center" style="padding-right: 20px;"><img src="img/logo-abastible.png"></div>
+                <br>
+                <hr>
+                <h2 class="text-center"><strong>Confirma tu pedido!</strong></h2>
+                <br>
+                <h2></h2>
+                <div class="list datos-confirmar">
+                    <div class="item" href="#">
+                        <p><strong>Dirección despacho</strong></p>
+                        <input class="input-confirmar" type="text" name="direccion" value="Pablo Burchard #321, Maipú, Santiago" placeholder="Pablo Burchard #321, Maipú, Santiago">
+                        <p><strong>Mi número de teléfono es:</strong></p>
+                        <input class="input-confirmar" type="text" name="telefono" value="56 9 7141 8842" placeholder="56 9 7141 8842">
+                    </div>
+                    <div class="item item-icon-right" href="#">
+                        Cilindro de {{model.detalle_pedido.litros.label}}
+                        <i class="icon ion-checkmark-circled balanced"></i>
+                    </div>
+                    <div class="item item-icon-right" href="#">
+                        {{model.detalle_pedido.cantidad.label}}
+                        <i class="icon ion-checkmark-circled balanced"></i>
+                    </div>
+                    <div class="item" href="#">
+                        <h1 class="text-right">$15.000</h1>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="card">
-    <div class="item item-text-wrap">
-        <button class="button button-full button-positive" ng-click="confirmar()">
-        Confirmar 
-        </button>
-    </div>
-</div>
-</ion-content>
-<ion-footer-bar class="bar-stable">
-<a class="button button-small icon-left ion-close-round pull-left" href="#/app/pedido">Cancelar</a>
-</ion-footer-bar>
+    </ion-content>
+    <ion-footer-bar class="bar-stable">
+        <a class="button button-small icon-left ion-home pull-left" href="#/app/inicio">&nbsp;Inicio</a>
+        <a class="button button-large icon-left pull-left ion-compose" href="#/app/detalle">&nbsp;Volver</a>
+        <a class="button button-large icon-right ion-checkmark button-balanced" ng-click="confirmar()">Confirmar&nbsp;</a>
+    </ion-footer-bar>
 </ion-view>

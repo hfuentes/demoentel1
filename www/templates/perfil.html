@@ -1,33 +1,41 @@
 <ion-view view-title="Mis datos" hide-back-button="true">
-<ion-content>
-<div class="card">
-    <div class="item item-text-wrap">
-        <h1 class="text-center">Mis datos</h1>
-        <p>Al ingresar sus datos podremos gestionar mejor sus solicitudes!</p>
-    </div>
-</div>
-<div class="card">
-    <div class="item item-text-wrap">
-        <div class="list">
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Nombre</span>
-                <input type="text" placeholder="Agregue primer nombre" ng-model="model.perfil.nombre">
-            </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Apellido</span>
-                <input type="text" placeholder="Agregue apellido paterno" ng-model="model.perfil.apellido">
-            </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Correo electrónico</span>
-                <input type="email" placeholder="nombre@correo.com" ng-model="model.perfil.correo">
-            </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Teléfono</span>
-                <input type="phone" placeholder="71418842" ng-model="model.perfil.telefono">
-            </label>
-            <a class="button button-full button-balanced" ng-click="editar()">Confirmar datos</a>
+    <ion-content>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <br>
+                <div class="text-center" style="padding-right: 20px;"><img src="img/logo-abastible.png"></div>
+                <br>
+                <hr>
+                <h2 class="text-center"><strong>Mis datos</strong></h2>
+                <p>Al ingresar sus datos podremos gestionar mejor sus solicitudes, recuerde hacer click en el botón confirmar datos para guardar los cambios realizados.</p>
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nombre</span>
+                        <input type="text" placeholder="Agregue primer nombre" ng-model="model.perfil.nombre">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Apellido</span>
+                        <input type="text" placeholder="Agregue apellido paterno" ng-model="model.perfil.apellido">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">R.U.T.</span>
+                        <input type="text" placeholder="16.748.540-5" ng-model="model.perfil.rut">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Correo electrónico</span>
+                        <input type="email" placeholder="nombre@correo.com" ng-model="model.perfil.correo">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Teléfono</span>
+                        <input type="text" placeholder="56 9 7141 8842" ng-model="model.perfil.telefono">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dirección para despacho</span>
+                        <input type="text" placeholder="San Sebastian #2751, Las Condes, Santiago" ng-model="model.perfil.direccion">
+                    </label>
+                    <a class="button button-full button-balanced" ng-click="editar()">Confirmar datos</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</ion-content>
+    </ion-content>
 </ion-view>

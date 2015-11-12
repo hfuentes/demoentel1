@@ -1,70 +1,22 @@
 angular.module('starter.controllers', []).controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-    // With the new view caching in Ionic, Controllers are only called
-    // when they are recreated or on app start, instead of every page change.
-    // To listen for when this page is active (for example, to refresh data),
-    // listen for the $ionicView.enter event:
-    //$scope.$on('$ionicView.enter', function(e) {
-    //});
-    // Form data for the login modal
-    $scope.loginData = {};
-    // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/login.html', {
-        scope: $scope
-    }).then(function(modal) {
-        $scope.modal = modal;
-    });
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function() {
-        $scope.modal.hide();
-    };
-    // Open the login modal
-    $scope.login = function() {
-        $scope.modal.show();
-    };
-    // Perform the login action when the user submits the login form
-    $scope.doLogin = function() {
-        console.log('Doing login', $scope.loginData);
-        // Simulate a login delay. Remove this and replace with your login
-        // code if using a login system
-        $timeout(function() {
-            $scope.closeLogin();
-        }, 1000);
-    };
-}).controller('PlaylistsCtrl', function($scope) {
-    $scope.playlists = [{
-        title: 'Reggae',
-        id: 1
-    }, {
-        title: 'Chill',
-        id: 2
-    }, {
-        title: 'Dubstep',
-        id: 3
-    }, {
-        title: 'Indie',
-        id: 4
-    }, {
-        title: 'Rap',
-        id: 5
-    }, {
-        title: 'Cowbell',
-        id: 6
-    }];
-}).controller('PlaylistCtrl', function($scope) {}).controller('PedidoCtrl', function($scope) {}).controller('DetalleCtrl', function($scope, $state) {
+    //nada
+}).controller('InicioCtrl', function($scope) {
+    //controlador seccion inicio
+}).controller('DetalleCtrl', function($scope, $state) {
     $scope.model = {};
     //datos
     $scope.model.litrosList = [{
-        label: "5 Lts",
+        label: "5 kilos",
         value: 5
     }, {
-        label: "10 Lts",
-        value: 10
+        label: "11 kilos",
+        value: 11
     }, {
-        label: "15 Lts",
+        label: "15 kilos",
         value: 15
     }, {
-        label: "20 Lts",
-        value: 20
+        label: "45 kilos",
+        value: 45
     }];
     $scope.model.cantidadList = [{
         label: "1 Un.",
@@ -78,7 +30,10 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
     }, {
         label: "4 Uns.",
         value: 4
-    }, ];
+    }, {
+        label: "5 Uns.",
+        value: 5
+    }];
     //valores por defecto
     var detalle_pedido = JSON.parse(window.localStorage['detalle_pedido'] || null);
     if (detalle_pedido) {
@@ -115,13 +70,14 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
     }
     //metodo para confirmar datos
     $scope.confirmar = function() {
-        var historico_pedido = JSON.parse(window.localStorage['historico_pedido'] || null);
+        //agregar a historico
+        /*var historico_pedido = JSON.parse(window.localStorage['historico_pedido'] || null);
         if (historico_pedido) {
             historico_pedido.push($scope.model.detalle_pedido);
             window.localStorage['historico_pedido'] = JSON.stringify(historico_pedido);
         } else {
             window.localStorage['historico_pedido'] = JSON.stringify([$scope.model.detalle_pedido]);
-        }
+        }*/
         $scope.showAlert();
     };
     // An elaborate, custom popup
@@ -130,7 +86,7 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
             title: 'Pedido confirmado!',
             template: '<h3><strong>Felicidades!</strong></h3><h3>Tu pedido ha sido enviado exitosamente.</h3><br><h4 class="text-right">Gracias por preferirnos!</h4>'
         }).then(function(res) {
-            $state.go('app.pedido');
+            $state.go('app.inicio');
         });
     };
 }).controller('LlamameCtrl', function($scope, $ionicPopup, $state) {
@@ -147,7 +103,7 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
     $scope.model.perfil = {};
     var perfil = JSON.parse(window.localStorage['perfil'] || null);
     if (perfil) {
-      $scope.model.perfil = perfil;
+        $scope.model.perfil = perfil;
     }
     $scope.editar = function() {
         window.localStorage['perfil'] = JSON.stringify($scope.model.perfil);
@@ -156,4 +112,6 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
             template: '<h3><strong>Felicidades!</strong></h3><p>Tus datos han sido modificados exitosamente!</p><br><h4 class="text-right">Gracias por preferirnos!</h4>'
         });
     };
+}).controller('MapaCtrl', function($scope){
+    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 });

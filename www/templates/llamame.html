@@ -1,25 +1,32 @@
 <ion-view view-title="Llámame" hide-back-button="true">
-
-<ion-content>
-<div class="card">
-    <div class="item item-text-wrap">
-        <h1 class="text-center">Bienvenido!</h1>
-    </div>
-</div>
-<div class="card">
-    <div class="item item-text-wrap">
-        <h2>Este es el serico <strong>Llámame!</strong>, has click en el botón más abajo para solicitar tu atención</h2>
-    </div>
-</div>
-<div class="card">
-    <div class="item item-text-wrap">
-        <button class="button button-full button-positive" ng-click="llamame()">
-        Llámame
-        </button>
-    </div>
-</div>
-</ion-content>
-<ion-footer-bar class="bar-stable">
-<a class="button button-small icon-left ion-close-round pull-left" href="#/app/pedido">Cancelar</a>
-</ion-footer-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <br>
+                <div class="text-center" style="padding-right: 20px;"><img src="img/logo-abastible.png"></div>
+                <br>
+                <hr>
+                <h2 class="text-center"><strong>¡Click to Call!</strong></h2>
+                <br>
+                <h2>Este es el servicio <strong>Llámame!</strong>, solo has click en botón más abajo para que nuestros ejecutivos se pongan en contacto contigo.</h2>
+                <br>
+                <div class="list datos-confirmar">
+                    <div class="item text-center" href="#">
+                        <p><strong>Mi número de teléfono es:</strong></p>
+                        <input class="input-telefono-llamame" type="text" name="telefono" value="56 9 7141 8842" placeholder="56 9 7141 8842">
+                    </div>
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="button button-positive icon-right ion-ios-telephone" ng-click="llamame()">&nbsp;Llámame</button>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar-stable">
+        <a class="button button-small icon-left ion-home pull-left" href="#/app/inicio">&nbsp;Inicio</a>
+        <a class="button button-large icon-left ion-person" href="#/app/perfil">&nbsp;Editar mis datos</a>
+    </ion-footer-bar>
 </ion-view>
