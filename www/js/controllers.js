@@ -84,7 +84,7 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
     $scope.showAlert = function() {
         var alertPopup = $ionicPopup.alert({
             title: 'Pedido confirmado!',
-            template: '<h3><strong>Felicidades!</strong></h3><h3>Tu pedido ha sido enviado exitosamente.</h3><br><h4 class="text-right">Gracias por preferirnos!</h4>'
+            template: '<h3><strong>Felicidades!</strong></h3><h3>Tu pedido ha sido recepcionado exitosamente.</h3><br><h4 class="text-right">Gracias por preferirnos!</h4>'
         }).then(function(res) {
             $state.go('app.inicio');
         });
@@ -112,6 +112,4 @@ angular.module('starter.controllers', []).controller('AppCtrl', function($scope,
             template: '<h3><strong>Felicidades!</strong></h3><p>Tus datos han sido modificados exitosamente!</p><br><h4 class="text-right">Gracias por preferirnos!</h4>'
         });
     };
-}).controller('MapaCtrl', function($scope){
-    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-});
+}).controller('MapaCtrl', function($scope){});
